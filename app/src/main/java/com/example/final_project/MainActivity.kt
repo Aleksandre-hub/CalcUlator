@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         etInput = findViewById(R.id.etInput)
         reset = findViewById(R.id.Reset)
 
+        setButtonClickListeners()
+
         reset.setOnClickListener {
             expression = ""
             etInput.setText("")
@@ -108,11 +110,6 @@ class MainActivity : AppCompatActivity() {
                 return x
             }
         }.parse()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        setButtonClickListeners()
     }
 
     private fun setButtonClickListeners() {
